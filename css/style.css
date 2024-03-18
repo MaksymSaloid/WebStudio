@@ -59,6 +59,9 @@ body {
   color: #757575;
   text-decoration: none;
 }
+.header-burger {
+  display: none;
+}
 
 /*---hero---*/
 
@@ -138,6 +141,7 @@ body {
 .work-foto {
   flex: 1 1 30%;
   height: 294px;
+  position: relative;
 }
 .work-foto img {
   width: 100%;
@@ -263,6 +267,7 @@ body {
 .projects-cards-box {
   flex: 0 1 33.333%;
   padding: 0 15px;
+  overflow: hidden;
 }
 .project-title-desc {
   border: 1px solid #eee;
@@ -306,4 +311,131 @@ body {
   font-weight: 400;
   line-height: 187%;
   color: #757575;
+}
+
+/*992px*/
+
+@media (max-width: 992px) {
+  .header-logo {
+    margin-right: 30px;
+  }
+  .header-menu,
+  .header-list {
+    gap: 20px;
+  }
+  .details-cards {
+    gap: 15px;
+  }
+  .team-cards {
+    flex-wrap: wrap;
+  }
+  .team-card {
+    flex: 1 1 45%;
+  }
+}
+@media (max-width: 768px) {
+  .header-menu,
+  .header-list {
+    display: none;
+  }
+  .header-logo {
+    margin-right: auto;
+  }
+  .header-burger {
+    display: block;
+    width: 24px;
+    height: 16px;
+    cursor: pointer;
+    position: relative;
+  }
+  .header-burger::before,
+  .header-burger::after,
+  .header-burger span {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: black;
+  }
+  .header-burger::after {
+    top: auto;
+    bottom: 0;
+  }
+  .header-burger span {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .hero {
+    min-height: 400px;
+  }
+  .hero-title {
+    font-size: 30px;
+  }
+
+  .details-cards {
+    flex-wrap: wrap;
+  }
+  .details-card {
+    flex: 1 1 45%;
+  }
+  .details-card-title {
+    text-align: center;
+  }
+  .work-fotos {
+    flex-flow: wrap;
+  }
+  .work-foto {
+    flex: 1 1 45%;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    max-width: 540px;
+  }
+  .work-foto {
+    flex-basis: 100%;
+  }
+  .details-card {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+  .team-card {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 1145px) {
+  .projects-cards-box {
+    flex: 1 1 45%;
+  }
+}
+@media (max-width: 768px) {
+  .projects-cards-box {
+    flex: 1 1 100%;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    padding: 16px 0 16px;
+  }
+  .buttons {
+    padding: 60px 0 0;
+  }
+  .buttons-btn {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .projects {
+    padding: 40px 0 58px;
+  }
+  .project-image {
+    height: 294px;
+  }
+  .footer {
+    text-align: center;
+  }
+  .footer-address {
+    align-items: center;
+  }
 }
